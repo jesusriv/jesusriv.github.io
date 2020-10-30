@@ -9,8 +9,7 @@ const ProjectCardContainer = styled.div`
     text-align: center;
     background-color: #3f4245;
     padding-bottom: 20px;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
     border-radius: 7px;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.6);
     max-width: 337.5px;
