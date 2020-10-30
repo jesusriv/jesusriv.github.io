@@ -40,7 +40,7 @@ const Form = () => {
             <input type="text" placeholder="Name" />
             <input type="email" placeholder="Email" />
             <textarea placeholder="Message"></textarea>
-            <Button>Send</Button>
+            <Button type="submit">Send</Button>
         </FormContainer>
     );
 };

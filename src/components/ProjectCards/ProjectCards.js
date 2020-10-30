@@ -45,6 +45,7 @@ const ProjectCardContainer = styled.div`
 
 const Project = ({ img, title, description, items, url, site }) => {
     const [viewProject, setViewProject] = useState(false);
+    const [nextImg, setImg] = useState(false);
 
     const handleView = () => {
         document.body.style.overflow = "";
@@ -75,7 +76,11 @@ const Project = ({ img, title, description, items, url, site }) => {
                     </div> :
                     null
             }
-            <img src={img} alt={title} />
+            {
+                title === "Places" ?
+                    <img src={img[0]} alt={title} /> :
+                    <img src={img} alt={title} />
+            }
             <p>{title}</p>
             <Button onClick={() => {
                 setViewProject(true);

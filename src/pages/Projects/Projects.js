@@ -5,10 +5,16 @@ import projects from '../../data/projects-data.json';
 
 import Bounce from '../../assets/images/bounce_attack.gif';
 import Splash from '../../assets/images/image_splash.gif';
+import Landing from '../../assets/images/landing.png';
+import Map from '../../assets/images/map.png';
 
 const gifs = {
     "Image Splash": Splash,
-    "Bounce Attack": Bounce
+    "Bounce Attack": Bounce,
+    "Places": [
+        Landing,
+        Map
+    ]
 }
 
 const media = {

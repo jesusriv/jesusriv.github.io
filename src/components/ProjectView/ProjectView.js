@@ -91,7 +91,11 @@ const ProjectView = ({ img, title, description, items, handleView, url, site }) 
             <p className="title">{title}</p>
             <div className="bottom">
                 <div className="img-container">
-                    <img src={img} alt="bounce" />
+                    {
+                        title === "Places" ?
+                            <img src={img[0]} alt="bounce" /> :
+                            <img src={img} alt="bounce" />
+                    }
                 </div>
                 <div className="left">
                     <p className="description">
@@ -106,10 +110,7 @@ const ProjectView = ({ img, title, description, items, handleView, url, site }) 
                         }
                     </ul>
                     {
-                        title === 'Bounce Attack' ?
-                            <a href={url}>
-                                <Button>View Code</Button>
-                            </a> :
+                        title === 'Image Splash' ?
                             <div className="buttons">
                                 <a href={url}>
                                     <Button>View Code</Button>
@@ -117,7 +118,10 @@ const ProjectView = ({ img, title, description, items, handleView, url, site }) 
                                 <a href={site}>
                                     <Button>Visit Site</Button>
                                 </a>
-                            </div>
+                            </div> :
+                            <a href={url}>
+                                <Button>View Code</Button>
+                            </a>
                     }
                 </div>
             </div>
