@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 import Header from '../../components/Header/Header';
 import LandingBody from '../../components/LandingBody/LandingBody';
-import Button from '../../components/Button/Button';
 import menu from '../../assets/icons/hamburger.svg';
 import MobileMenu from '../../components/MobileMenu/MobileMenu';
 
@@ -78,46 +77,11 @@ const Landing = () => {
             </Header>
             {
                 viewMenu ?
-                    <MobileMenu>
-                        <ul>
-                            <li>
-                                <a href="#top">HOME</a>
-                            </li>
-                            <li>
-                                <a href="#projects">PROJECT</a>
-                            </li>
-                            <li>
-                                <a href="#tools">TOOLS</a>
-                            </li>
-                            <li>
-                                <a href="#about-me">ABOUT</a>
-                            </li>
-                            <li>
-                                <a href="#contact">CONTACT</a>
-                            </li>
-                        </ul>
-                    </MobileMenu> :
+                    <MobileMenu /> :
                     null
             }
 
-            <LandingBody>
-                <div className="landing-box">
-                    <p className="body-text">
-                        Jesus Rivera
-                    <br />
-                        <hr />
-                    Web Developer
-                    <br />
-                    portfolio
-                    </p>
-                    <p className="body-subtext">
-                        Follow the link below <br />to view my recent projects.
-                    </p>
-                    <a href="#projects">
-                        <Button>View Projects</Button>
-                    </a>
-                </div>
-            </LandingBody>
+            <LandingBody />
         </LandingContainer>
     );
 };

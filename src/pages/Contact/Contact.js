@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Button from '../../components/Button/Button';
 import Form from '../../components/Form/Form';
 
 const ContactContainer = styled.div`
@@ -12,12 +11,7 @@ const Contact = () => {
     return (
         <ContactContainer id="contact">
             <p className="section-heading">Get In Touch</p>
-            <Form>
-                <input type="text" placeholder="Name" />
-                <input type="email" placeholder="Email" />
-                <textarea placeholder="Message"></textarea>
-                <Button>Send</Button>
-            </Form>
+            <Form />
         </ContactContainer>
     );
 };

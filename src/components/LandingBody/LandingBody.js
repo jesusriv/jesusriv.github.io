@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import Button from '../Button/Button';
 
-const LandingBody = styled.div`
+const LandingBodyContainer = styled.div`
     position: absolute;
     top: 0;
     left: 0;
@@ -15,20 +16,25 @@ const LandingBody = styled.div`
     align-items: center;
     
     .landing-box {
+        height: 400px;
         width: 90%;
         text-align: center;
-        text-transform: uppercase;
     }
-
+    
     .body-text {
         font-size: 40px;
         font-weight: bold;
         color: #DBDBDB;
+        font-weight: 300;
+        span {
+            font-family: 'Cedarville Cursive', cursive;
+        }
     }
-
+    
     .body-subtext {
+        text-transform: uppercase;
         line-height: 1.5;
-        font-weight: 800;
+        font-weight: 700;
         font-size: 18px;
         margin-top: -15px;
         margin-bottom: 25px;
@@ -36,5 +42,25 @@ const LandingBody = styled.div`
     }
 `;
 
+const LandingBody = () => {
+    return (
+        <LandingBodyContainer>
+            <div className="landing-box">
+                <p className="body-text">
+                    jesus rivera
+                        <br />
+                    <hr />
+                    <span>web developer</span>
+                </p>
+                <p className="body-subtext">
+                    Follow the link below <br />to view my recent projects.
+                    </p>
+                <a href="#projects">
+                    <Button>View Projects</Button>
+                </a>
+            </div>
+        </LandingBodyContainer>
+    );
+};
 
 export default LandingBody;
