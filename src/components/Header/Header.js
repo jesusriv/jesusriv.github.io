@@ -8,6 +8,11 @@ const Header = styled.header`
 
     .name {
         font-size: 22px;
+        color: #7e7e7e;
+
+        span {
+            color: #fff;
+        }
     }
     
     img {

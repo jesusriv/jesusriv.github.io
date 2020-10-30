@@ -15,7 +15,7 @@ const Landing = () => {
     return (
         <LandingContainer>
             <Header>
-                <p className="name">Jesus Rivera</p>
+                <p className="name">Jesus <span>Rivera</span></p>
                 <img src={menu} alt="hamburger-menu" />
             </Header>
 

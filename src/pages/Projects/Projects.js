@@ -25,11 +25,14 @@ const Projects = () => {
             <p className="section-heading">Projects</p>
 
             {
-                projects.map(project => {
+                projects.map((project, i) => {
                     return (
                         <Project
+                            key={i}
                             img={gifs[project.title]}
                             title={project.title}
+                            description={project.description}
+                            items={project.items}
                         />
                     )
                 })

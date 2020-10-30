@@ -10,9 +10,9 @@ const ToolCards = styled.div`
     margin-bottom: 20px;
 
     p {
-        font-weight: 600;
+        font-weight: 700;
         color: #26282b;
-        font-size: 18px;
+        font-size: 20px;
     }
 
     ul {
@@ -27,6 +27,9 @@ const ToolCards = styled.div`
             list-style: none;
             color: #fff;
             font-size: 16px;
+            text-transform: uppercase;
+            font-weight: normal;
+            margin-bottom: 20px;
         }
     }
 `;
@@ -39,9 +42,9 @@ const ToolCard = ({ img, title, items }) => {
             <p>{title}</p>
             <ul>
                 {
-                    items.map(item => {
+                    items.map((item, i) => {
                         return (
-                            <li>
+                            <li key={i}>
                                 {item}
                             </li>
                         )

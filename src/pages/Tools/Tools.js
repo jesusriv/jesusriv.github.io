@@ -34,9 +34,10 @@ const Tools = () => {
             <p className='section-heading'>Developer Tools</p>
             <div className="card-container">
                 {
-                    toolData.map(tool => {
+                    toolData.map((tool, i) => {
                         return (
                             <ToolCard
+                                key={i}
                                 img={svgs[tool.title]}
                                 title={tool.title}
                                 items={tool.items}

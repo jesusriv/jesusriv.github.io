@@ -1,5 +1,8 @@
+import { useState } from 'react';
+
 import styled from 'styled-components';
 import Button from '../Button/Button';
+import ProjectView from '../ProjectView/ProjectView';
 
 const ProjectCardContainer = styled.div`
     width: 90%;
@@ -23,12 +26,28 @@ const ProjectCardContainer = styled.div`
     }
 `;
 
-const Project = ({ img, title }) => {
+const Project = ({ img, title, description, items }) => {
+    const [viewProject, setViewProject] = useState(false);
+
+    const handleView = () => {
+        return setViewProject(!viewProject);
+    };
     return (
         <ProjectCardContainer>
+            {
+                viewProject ?
+                    <ProjectView
+                        img={img}
+                        title={title}
+                        description={description}
+                        items={items}
+                        handleView={handleView}
+                    /> :
+                    null
+            }
             <img src={img} alt={title} />
             <p>{title}</p>
-            <Button>View Details</Button>
+            <Button onClick={() => setViewProject(true)} >View Details</Button>
         </ProjectCardContainer>
     )
 }
