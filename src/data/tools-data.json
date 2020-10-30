@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Languages",
+        "items": [
+            "HTML5",
+            "CSS3",
+            "Javascrip",
+            "Python",
+            "Java"
+        ]
+    },
+    {
+        "title": "Databases",
+        "items": [
+            "MySql",
+            "sqlLite",
+            "MongoDb / Mongoose"
+        ]
+    },
+    {
+        "title": "Frameworks",
+        "items": [
+            "Django",
+            "ExpressJs",
+            "ReactJs",
+            "Angular"
+        ]
+    },
+    {
+        "title": "Other Tools",
+        "items": [
+            "Processing (Java)",
+            "PostMan",
+            "Spring Tools",
+            "REST Api"
+        ]
+    }
+]
