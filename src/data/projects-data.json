@@ -1,0 +1,29 @@
+[
+    {
+        "title": "Image Splash",
+        "description": "Built in Angular and powered by the Unsplash API, “Image Splash” helps you find professional images and the photographers who take them. Save the images to your dashboard and follow the artist's Unsplash page or their other social media accounts.",
+        "items": [
+            "Angular",
+            "TypeScript",
+            "Adobe XD"
+        ]
+    },
+    {
+        "title": "Bounce Attack",
+        "description": "Written in Java and built with Processing along with Box2d; Bounce Attack is a one-player game with the objective to bounce the falling balls outside of the boundaries and crash the game.",
+        "items": [
+            "Processing",
+            "Box2D",
+            "Object Oriented Programming"
+        ]
+    },
+    {
+        "title": "Places",
+        "description": "Pin the places you've been to, and plan future trips. Places uses Mapbox's Map API to pin point your past and future trips to keep track of memories and their locations.",
+        "items": [
+            "React",
+            "MapBox GL",
+            "Firestore"
+        ]
+    }
+]

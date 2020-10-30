@@ -10,6 +10,7 @@ const ToolCards = styled.div`
     margin-bottom: 20px;
 
     p {
+        font-weight: 600;
         color: #26282b;
         font-size: 18px;
     }

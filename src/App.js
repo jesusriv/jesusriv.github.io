@@ -1,4 +1,5 @@
 import Landing from './pages/Landing/Landing';
+import Projects from './pages/Projects/Projects';
 import Tools from './pages/Tools/Tools';
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <div>
       <Landing />
       <Tools />
+      <Projects />
     </div>
   );
 }
