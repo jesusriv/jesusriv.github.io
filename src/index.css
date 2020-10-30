@@ -24,5 +24,9 @@ code {
   text-transform: uppercase;
 }
 
-
+hr {
+  width: 50px;
+  border: 1px solid #38a098;
+  border-radius: 5px;
+}
 

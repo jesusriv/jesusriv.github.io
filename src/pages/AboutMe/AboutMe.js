@@ -2,22 +2,17 @@ import styled from 'styled-components';
 
 const AboutMeContainer = styled.div`
     width: 100%;
-    padding: 30px 0;
+    padding: 30px 0 80px 0;
     background-color: #2a2c30;
     text-align: center;
-    
+
     p {
         width: 90%;
         margin: 0 auto;
-        font-weight: 200;
+        font-weight: 300;
         font-size: 20px;
         max-width: 420px;
-    }
-
-    hr {
-        width: 50px;
-        border: 1px solid #38a098;
-        border-radius: 5px;
+        line-height: 1.5;
     }
 `;
 
