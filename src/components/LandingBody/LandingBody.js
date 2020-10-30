@@ -28,12 +28,13 @@ const LandingBody = styled.div`
 
     .body-subtext {
         line-height: 1.5;
-        font-weight: 700;
+        font-weight: 800;
         font-size: 18px;
         margin-top: -15px;
         margin-bottom: 25px;
         color: #A8A8A8;
     }
 `;
+
 
 export default LandingBody;

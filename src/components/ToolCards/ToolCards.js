@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 const ToolCards = styled.div`
     width: 100%;
+    max-width: 337.5px;
+    height: 358px;
     background-color: #38a098;
     box-shadow: 0 0 7px rgba(0, 0, 0, 0.6);
     text-align: center;
@@ -28,7 +30,7 @@ const ToolCards = styled.div`
             color: #fff;
             font-size: 16px;
             text-transform: uppercase;
-            font-weight: normal;
+            font-weight: 700;
             margin-bottom: 20px;
         }
     }

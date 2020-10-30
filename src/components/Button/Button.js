@@ -1,12 +1,13 @@
 import styled from 'styled-components';
 
+
 const Button = styled.button`
     width: 160px;
     padding: 15px 0;
     background-color: #38A098;
     color: #fff;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 500;
     text-transform: uppercase;
     border: none;
     border-radius: 5px;
@@ -15,6 +16,10 @@ const Button = styled.button`
 
     &:active {
         box-shadow: none;
+    }
+
+    &:hover {
+        cursor: pointer;
     }
 `;
 

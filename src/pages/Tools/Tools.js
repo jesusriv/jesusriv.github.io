@@ -15,22 +15,33 @@ const svgs = {
     "Other Tools": OtherTools
 }
 
+const media = {
+    desktop: '@media(min-width: 750px)'
+}
+
 const ToolsContainer = styled.div`
     width: 100%;
-    display: flex;
     background-color: #3f4245;
-    flex-direction: column;
-    align-items: center;
     padding: 30px 0;
-    
+
     .card-container {
+        margin: 0 auto;
         width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        ${media.desktop} {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+        }
     }
 `;
 
 const Tools = () => {
     return (
-        <ToolsContainer>
+        <ToolsContainer id="tools">
             <p className='section-heading'>Developer Tools</p>
             <div className="card-container">
                 {

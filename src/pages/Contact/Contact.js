@@ -10,7 +10,7 @@ const ContactContainer = styled.div`
 
 const Contact = () => {
     return (
-        <ContactContainer>
+        <ContactContainer id="contact">
             <p className="section-heading">Get In Touch</p>
             <Form>
                 <input type="text" placeholder="Name" />

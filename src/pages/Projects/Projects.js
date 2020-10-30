@@ -11,32 +11,53 @@ const gifs = {
     "Bounce Attack": Bounce
 }
 
+const media = {
+    desktop: '@media(min-width: 750px)'
+}
+
 const ProjectsContainer = styled.div`
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 30px 0;
+
+    .project-container {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        ${media.desktop} {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+        }
+        
+    }
+
 `;
 
 const Projects = () => {
     return (
-        <ProjectsContainer>
+        <ProjectsContainer id="projects">
             <p className="section-heading">Projects</p>
 
-            {
-                projects.map((project, i) => {
-                    return (
-                        <Project
-                            key={i}
-                            img={gifs[project.title]}
-                            title={project.title}
-                            description={project.description}
-                            items={project.items}
-                        />
-                    )
-                })
-            }
+            <div className="project-container">
+                {
+                    projects.map((project, i) => {
+                        return (
+                            <Project
+                                key={i}
+                                img={gifs[project.title]}
+                                title={project.title}
+                                description={project.description}
+                                items={project.items}
+                                url={project.url}
+                                site={project.site}
+                            />
+                        )
+                    })
+                }
+            </div>
         </ProjectsContainer>
     );
 }

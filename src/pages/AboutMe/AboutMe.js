@@ -11,6 +11,7 @@ const AboutMeContainer = styled.div`
         margin: 0 auto;
         font-weight: 200;
         font-size: 20px;
+        max-width: 420px;
     }
 
     hr {
@@ -22,7 +23,7 @@ const AboutMeContainer = styled.div`
 
 const AboutMe = () => {
     return (
-        <AboutMeContainer>
+        <AboutMeContainer id="about-me">
             <h4 className="section-heading">About Me</h4>
             <p>
                 As a developer, I have the creative freedom to design and program

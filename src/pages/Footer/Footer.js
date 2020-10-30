@@ -12,6 +12,15 @@ const FooterContainer = styled.footer`
     padding: 30px 0;
     text-align: center;
 
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    a:hover {
+        cursor: pointer
+    }
+
     .icons {
         width: 150px;
         display: flex;
@@ -50,19 +59,19 @@ const Footer = () => {
 
             <ul>
                 <li>
-                    HOME
+                    <a href="#top">HOME</a>
                 </li>
                 <li>
-                    PROJECT
+                    <a href="#projects">PROJECT</a>
                 </li>
                 <li>
-                    TOOLS
+                    <a href="#tools">TOOLS</a>
                 </li>
                 <li>
-                    ABOUT
+                    <a href="#about-me">ABOUT</a>
                 </li>
                 <li>
-                    CONTACT
+                    <a href="#contact">CONTACT</a>
                 </li>
             </ul>
 

@@ -4,83 +4,122 @@ import Button from '../Button/Button';
 
 import exit from '../../assets/icons/exit.svg';
 
+const media = {
+    desktop: '@media(min-width: 1000px)',
+    tablet: '@media(min-width: 700px)',
+}
+
 const ProjectViewContainer = styled.div`
-    position: fixed;
-    background-color: #26282b;
-    padding: 30px 0;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
+    width: 80%;
     text-align: left;
+    background-color: #26282B;
+    position: relative;
+    padding: 20px;
 
     .exit {
+        width: 25px;
         position: absolute;
-        top: 20px;
-        right: 20px;
-        width: 20px;
+        top: 15px;
+        right: 15px;
     }
 
     .title {
-        font-size: 28px;
         text-align: center;
+        font-size: 28px;
     }
 
-    .description {
-        padding: 0 5px;
-        font-size: 14px;
-        text-transform: capitalize;
-        color: #ededed;
-        line-height: 1.5;
-    }
+    .bottom {
 
-    .technologies {
-        margin: -5px 0;
-        font-size: 16px;
-    }
-
-    ul {
-        padding: 0 40px;
-
-        li {
-            list-style: circle;
+        .img-container {
+            margin: 0 auto;
         }
+    
+        .left {
+            .description  {font-size: 22px; text-transform: capitalize; font-weight: 300;}
+            .buttons {
+                margin: 0 auto;
+                width: 340px; 
+                display: flex;
+                justify-content: space-between;
+            }
+            .technologies {font-weight: 700;}
+        }
+
+        ${media.tablet} {
+            display: flex;
+            
+            .img-container {
+                width: 32%;
+                margin-top: 10px;
+            }
+
+            .left {
+                width: 58%;
+                .buttons {
+                    margin-left: 0;
+                }
+            }
+
+        }
+
+        ${media.desktop} {
+            height: 100%;
+            align-items: center;
+            .img-container {
+                width: 58%;
+            }
+
+            .left {
+                width: 40%;
+
+            }
+        }
+
     }
 
-    button {margin: 0 auto}
-
+    ${media.desktop} {
+        width: 90%;    
+    }
 `;
 
-const ProjectView = ({ img, title, description, items, handleView }) => {
-    console.log("HELLLLLLO", items);
+
+const ProjectView = ({ img, title, description, items, handleView, url, site }) => {
+
     return (
         <ProjectViewContainer>
             <img className="exit" src={exit} alt="exit" onClick={() => handleView()} />
             <p className="title">{title}</p>
-            <img src={img} alt="bounce" />
-            <div style={{ padding: '0 15px', display: 'flex', flexDirection: 'column' }}>
-                <p className="description">
-                    {description}
-                </p>
-                <p className="technologies">Technologies:</p>
-                <ul>
+            <div className="bottom">
+                <div className="img-container">
+                    <img src={img} alt="bounce" />
+                </div>
+                <div className="left">
+                    <p className="description">
+                        {description}
+                    </p>
+                    <p className="technologies">Technologies:</p>
+                    <ul>
+                        {
+                            items.map((item, i) => {
+                                return <li key={i}>{item}</li>
+                            })
+                        }
+                    </ul>
                     {
-                        items.map((item, i) => {
-                            return <li key={i}>{item}</li>
-                        })
+                        title === 'Bounce Attack' ?
+                            <a href={url}>
+                                <Button>View Code</Button>
+                            </a> :
+                            <div className="buttons">
+                                <a href={url}>
+                                    <Button>View Code</Button>
+                                </a>
+                                <a href={site}>
+                                    <Button>Visit Site</Button>
+                                </a>
+                            </div>
                     }
-                </ul>
-                {
-                    title === 'Bounce Attack' ?
-                        <Button>View Code</Button> :
-                        <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                            <Button>View Code</Button>
-                            <Button>View Details</Button>
-                        </div>
-                }
+                </div>
             </div>
         </ProjectViewContainer>
     );

@@ -6,7 +6,9 @@
             "Angular",
             "TypeScript",
             "Adobe XD"
-        ]
+        ],
+        "url": "https://github.com/jesusriv/image-app",
+        "site": "https://jesusriv.github.io/image-app/search"
     },
     {
         "title": "Bounce Attack",
@@ -15,7 +17,9 @@
             "Processing",
             "Box2D",
             "Object Oriented Programming"
-        ]
+        ],
+        "url": "https://github.com/jesusriv/bounce_attack",
+        "site": ""
     },
     {
         "title": "Places",
@@ -24,6 +28,8 @@
             "React",
             "MapBox GL",
             "Firestore"
-        ]
+        ],
+        "url": "",
+        "site": ""
     }
 ]
