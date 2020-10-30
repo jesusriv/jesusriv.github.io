@@ -1,3 +1,4 @@
+import AboutMe from './pages/AboutMe/AboutMe';
 import Landing from './pages/Landing/Landing';
 import Projects from './pages/Projects/Projects';
 import Tools from './pages/Tools/Tools';
@@ -8,6 +9,7 @@ function App() {
       <Landing />
       <Tools />
       <Projects />
+      <AboutMe />
     </div>
   );
 }
