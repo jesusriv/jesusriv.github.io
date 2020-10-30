@@ -8,7 +8,7 @@ const Button = styled.button`
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
     transition: .1s all ease-in;
 
     &:active {
